@@ -40,7 +40,8 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
  function addRectangle(x, y, width, height, color){
- 	b_context.fillRect(50, 25, 150, 100, darkCyan);
+	context.fillStyle = color;
+        context.fillRect(x, y, width, height);
  }
 	
 
@@ -69,7 +70,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     z-index: 1;
 }
    #a {
-    border: 2px solid lightPink;
+    border: 2px solid lightPurple;
 }	
 	
 </style>
@@ -90,8 +91,8 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 
 <!-- creates a blank canvas called "a" with the specified width and height -->
 	
-<a href="#one" onclick="addRectangle();" class="w3-btn w3-pink w3-round"> add rectangle </a> 
-
+<a href="#one" onclick="addRectangle(100, 100, 150, 75, 'darkCyan');" class="w3-btn w3-pink w3-round"> add rectangle </a> 
+               
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
