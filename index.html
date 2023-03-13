@@ -49,6 +49,16 @@ function addRectangle(){
 	
  }
 	
+function addName(){
+
+var canvas = document.getElementById('myCanvas');
+var ctx = canvas.getContext('2d');
+	
+ctx.fillStyle = 'rgb(167,135,255)';
+ctx.fillText = ('reyna', 100, 150);	
+	
+}
+	
 
 // creates a blank canvas called "a" with the specified width and height
 	
@@ -75,7 +85,7 @@ function addRectangle(){
     z-index: 1;
 }
    #myCanvas {
-    border: 2px solid rgb(167,135,255);
+    border: 2px solid black;
 }	
 	
 </style>
@@ -86,18 +96,21 @@ function addRectangle(){
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Content goes here.</p>
 		
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
-<canvas id="myCanvas" width="300" height="225"></canvas> 
-
-<!-- creates a blank canvas called "a" with the specified width and height -->
 	
-<a href="#one" onclick="addRectangle(50, 40, 100, 130, 'blue');" class="w3-btn w3-pink w3-round"> add rectangle </a> 
-               
+<canvas id="myCanvas" width="300" height="225"></canvas> <!-- creates a blank canvas called "a" with the specified width and height -->
+
+	
+<a href="#one" onclick="addRectangle(50, 40, 100, 130,);" class="w3-btn w3-pink w3-round"> add rectangle </a> <!-- button to add rectangle onto canvas-->
+
+<a href="#two" onclick="addName(50, 40, 100, 130,);" class="w3-btn w3-pink w3-round"> add name </a> <!-- button to add name onto canvas-->
+ 
+	
+	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
