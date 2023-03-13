@@ -39,15 +39,9 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-var a_canvas = document.getElementById("a"); //creates a varible for the blank canvas 
+ 
 	
-function rectangleAdd(){
-  var a_canvas = document.getElementById("a");
-  var a_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);
-}
-	
-<canvas id="a" width="300" height="225"></canvas> 
+
 // creates a blank canvas called "a" with the specified width and height
 	
 </script>
@@ -72,6 +66,10 @@ function rectangleAdd(){
     left: 0vw;
     z-index: 1;
 }
+   #a {
+    border: 2px solid lightPink;
+}	
+	
 </style>
 
 <body>
@@ -87,6 +85,7 @@ function rectangleAdd(){
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
 <canvas id="a" width="300" height="225"></canvas> 
+
 <!-- creates a blank canvas called "a" with the specified width and height -->
 	
 <a href="#one" onclick="rectangleAdd();" class="w3-btn w3-pink w3-round"> add rectangle </a> 
