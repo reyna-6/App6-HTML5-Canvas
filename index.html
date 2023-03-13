@@ -39,9 +39,12 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
- function addRectangle(x, y, width, height, color){
-	context.fillStyle = color;
-        context.fillRect(x, y, width, height);
+ var canvas = document.getElementById('myCanvas');
+ var ctx = canvas.getContext('2d');
+ 
+function addRectangle(){
+ ctx.fillStyle = 'cyan';
+ ctx.fillRect(50, 40, 100, 30);
  }
 	
 
@@ -70,7 +73,7 @@ console.log("This file last modified " + docMod); // generates message in javaSc
     z-index: 1;
 }
    #a {
-    border: 2px solid Purple;
+    border: 2px solid Cyan;
 }	
 	
 </style>
@@ -87,11 +90,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	
-<canvas id="a" width="300" height="225"></canvas> 
+<canvas id="myCanvas" width="300" height="225"></canvas> 
 
 <!-- creates a blank canvas called "a" with the specified width and height -->
 	
-<a href="#one" onclick="addRectangle(100, 100, 150, 75, 'red');" class="w3-btn w3-pink w3-round"> add rectangle </a> 
+<a href="#one" onclick="addRectangle(50, 40, 100, 130, 'blue');" class="w3-btn w3-pink w3-round"> add rectangle </a> 
                
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
