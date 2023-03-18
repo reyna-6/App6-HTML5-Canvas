@@ -74,7 +74,13 @@ function addImage(){
 
 };
 
+function clearCanvas(){
 
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d"); 
+  ctx.clearRect(0, 0, 300, 225)
+
+}
 	
 </script>
 
@@ -133,7 +139,8 @@ function addImage(){
 
 <a href="#three" onclick="addImage();" id="emoji" class="w3-btn w3-pink w3-round"> add Image </a> <!-- button to add name onto canvas-->
 
- 
+ <a href="#four" onclick="clearCanvas();" id="emoji" class="w3-btn w3-pink w3-round"> clear </a> <!-- button to clear canvas-->
+
 	
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
