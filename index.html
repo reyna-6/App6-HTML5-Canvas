@@ -7,7 +7,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Reyna Shah
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-create a blank canvas that can be drawn on, and cleared.
+create a blank canvas that can be drawn on and cleared.
  
 Known Issues:
-blah, blah, blah, blah
+Each individual aspect that goes on the canvas can't be removed. Only the entire canvas can be cleared.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -40,52 +40,48 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
+	
 function addRectangle(){  // creates a function that adds rectangle to the canvas
  
- var canvas = document.getElementById('myCanvas'); // 
- var ctx = canvas.getContext('2d');
+ var canvas = document.getElementById('myCanvas'); // captures the content of the canvas I made called myCanvas 
+ var ctx = canvas.getContext('2d'); // creates a variable called ctx to create a 2d drawing context on the canvas
  
- ctx.fillStyle = 'rgb(167,135,255)';
- ctx.fillRect(20, 20, 110, 50);
+ ctx.fillStyle = 'rgb(167,135,255)'; // sets the fill color of the canavs to purple
+ ctx.fillRect(20, 20, 110, 50); // constricts the fill color to a rectange of the specified shape on a certian part of the canvas
 	
  }
 	
-function addName(){
+function addName(){ // creates a function that adds my name to the canvas
 
-var canvas = document.getElementById('myCanvas');
-var ctx = canvas.getContext('2d');
+  var canvas = document.getElementById('myCanvas'); // captures the content of the canvas I made called myCanvas
+  var ctx = canvas.getContext('2d'); // creates a variable called ctx to create a 2d drawing context on the canvas
 
-ctx.font = "bold 30px sans-serif";	
-ctx.fillStyle = 'rgb(167,135,255)';
-ctx.fillText('reyna', 200, 205);
-
-
+  ctx.font = "bold 30px sans-serif"; // sets the font in the canvas to size 30 sans-serif	
+  ctx.fillStyle = 'rgb(167,135,255)'; // sets the fill color of the text in the canvas to purple
+  ctx.fillText('reyna', 200, 205); // puts 'reyna' on the canvas at the specified position
 	
 }
 
-function addImage(){ 
+function addImage(){ // creates a function that adds an image onto the canvas
 
-
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  var emoji = document.getElementById("emoji");
-  ctx.drawImage(emoji, 20, 200, 50, 50);
-
+  var canvas = document.getElementById("myCanvas"); // captures the content of the canvas I made called myCanvas
+  var ctx = canvas.getContext("2d"); // creates a variable called ctx to create a 2d drawing context on the canvas
+  var emoji = document.getElementById("emoji"); // creates a variable called emoji that gets calls content from the image url with id emoji
+  
+  ctx.drawImage(emoji, 20, 200, 50, 50); // this draws the emoji so that only his eyes pop up like he is looking over the edge of the canvas and it determines his size
 
 };
 
-function clearCanvas(){
+function clearCanvas(){ // function to clear the entire canvas
 
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d"); 
-  ctx.clearRect(0, 0, 300, 225)
+  var canvas = document.getElementById("myCanvas"); // captures the content of the canvas I made called myCanvas
+  var ctx = canvas.getContext("2d"); // creates a variable called ctx to create a 2d drawing context on the canvas
+  
+  ctx.clearRect(0, 0, 300, 225) // set the boundaries for clearing the canvas, set to the lenght and width of the whole canvas
 
 }
 	
 </script>
-
-
-
 
 
 <style>	
@@ -113,14 +109,14 @@ function clearCanvas(){
 </style>
 
 <body>
-<div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+<div id="header" class="w3-container w3-flat-carrot"> <!-- makes a header for the website -->
+	<h1>App6---HTML5-Canvas</h1> <!-- these words are printed in the header -->
 </div>
 	
-<div id="content" class="w3-container">
+<div id="content" class="w3-container"> <!-- space for the main content -->
 
 <div>
-<img id="emoji" src="https://pbs.twimg.com/media/FfkxPgwVQAYgmTy.jpg" alt="emoji" width="0" height="0"/>
+<img id="emoji" src="https://pbs.twimg.com/media/FfkxPgwVQAYgmTy.jpg" alt="emoji" width="0" height="0"/> <!-- gives an id called emoji to the url for my image -->
 </div>
  
 	
@@ -131,20 +127,20 @@ function clearCanvas(){
 
 <canvas id="myCanvas" width="300" height="225"></canvas> <!-- creates a blank canvas called "myCanvas" with the specified width and height -->
 
+<div>	
 	
+<a href="#one" onclick="addRectangle();" class="w3-btn w3-pink w3-round"> add rectangle </a> <!-- button calls addRecatangle function to add rectangle onto canvas-->
+
+<a href="#two" onclick="addName();" class="w3-btn w3-pink w3-round"> add name </a> <!-- button calls addName function to add name onto canvas-->
+
+<a href="#three" onclick="addImage();" id="emoji" class="w3-btn w3-pink w3-round"> add Image </a> <!-- button calls addImage function to add name onto canvas-->
+
+<a href="#four" onclick="clearCanvas();" class="w3-btn w3-pink w3-round"> clear </a> <!-- button calls clearCanvas function to clear canvas-->
+
+</div>	
 	
-<a href="#one" onclick="addRectangle();" class="w3-btn w3-pink w3-round"> add rectangle </a> <!-- button to add rectangle onto canvas-->
-
-<a href="#two" onclick="addName();" class="w3-btn w3-pink w3-round"> add name </a> <!-- button to add name onto canvas-->
-
-<a href="#three" onclick="addImage();" id="emoji" class="w3-btn w3-pink w3-round"> add Image </a> <!-- button to add name onto canvas-->
-
- <a href="#four" onclick="clearCanvas();" id="emoji" class="w3-btn w3-pink w3-round"> clear </a> <!-- button to clear canvas-->
-
-	
-	
-<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>DIY!</p>
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!-- creates a footer for the website -->
+	<p>DIY!</p> <!-- This is written on the header -->
 </footer>
 
 </body>
