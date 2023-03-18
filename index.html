@@ -65,17 +65,6 @@ ctx.fillText('reyna', 200, 205);
 
 
 
-function addImage(){ 
-
-
-  var canvas = document.getElementById("myCanvas");
-  var ctx = canvas.getContext("2d");
-  var stupid = document.getElementById("stupid");
-  ctx.drawImage(stupid, 20, 200);
-
-
-};
-
 
 	
 </script>
@@ -116,10 +105,23 @@ function addImage(){
 <div id="content" class="w3-container">
 
 <div>
-<img id="stupid" src="https://pbs.twimg.com/media/FfkxPgwVQAYgmTy.jpg" alt="stupid" width="89" height="57"/>
+<img id="emoji" src="https://pbs.twimg.com/media/FfkxPgwVQAYgmTy.jpg" alt="emoji" width="0" height="0"/>
 </div>
-        
+ 
+<script>
+function addImage(){ 
 
+
+  var canvas = document.getElementById("myCanvas");
+  var ctx = canvas.getContext("2d");
+  var emoji = document.getElementById("emoji");
+  ctx.drawImage(emoji, 20, 200, 50, 50);
+
+
+};
+
+</script>
+	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
@@ -128,11 +130,12 @@ function addImage(){
 <canvas id="myCanvas" width="300" height="225"></canvas> <!-- creates a blank canvas called "myCanvas" with the specified width and height -->
 
 	
+	
 <a href="#one" onclick="addRectangle();" class="w3-btn w3-pink w3-round"> add rectangle </a> <!-- button to add rectangle onto canvas-->
 
 <a href="#two" onclick="addName();" class="w3-btn w3-pink w3-round"> add name </a> <!-- button to add name onto canvas-->
 
-<a href="#three" onclick="addImage();" class="w3-btn w3-pink w3-round"> add Image </a> <!-- button to add name onto canvas-->
+<a href="#three" onclick="addImage();" id="emoji" class="w3-btn w3-pink w3-round"> add Image </a> <!-- button to add name onto canvas-->
 
  
 	
